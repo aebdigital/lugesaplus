@@ -50,9 +50,9 @@ function GalleryGridContent({ initialImages, categories }: { initialImages: Gall
     const handleKeyDown = useCallback((e: KeyboardEvent) => {
         if (selectedIndexRef.current === null) return;
         if (e.key === "Escape") setSelectedIndex(null);
-        if (e.key === "ArrowLeft") setSelectedIndex((prev) => (prev - 1 + filteredItems.length) % filteredItems.length);
-        if (e.key === "ArrowRight") setSelectedIndex((prev) => (prev + 1) % filteredItems.length);
-    }, [filteredItems.length]); // selectedIndex removed from dependencies
+        if (e.key === "ArrowLeft") setSelectedIndex((prev) => prev !== null ? (prev - 1 + filteredItems.length) % filteredItems.length : null);
+        if (e.key === "ArrowRight") setSelectedIndex((prev) => prev !== null ? (prev + 1) % filteredItems.length : null);
+    }, [filteredItems.length]);
 
     useEffect(() => {
         if (selectedIndex !== null) {
