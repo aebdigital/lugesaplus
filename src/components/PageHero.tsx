@@ -2,10 +2,12 @@ import { galleryItems } from "@/data/gallery";
 
 export default function PageHero({
     title,
+    imageSrc,
 }: {
     title: string;
+    imageSrc?: string;
 }) {
-    const heroImageSrc = galleryItems[0]?.src || "/web/brány/kovové/000006.jpg"; // Fallback to a default image if galleryItems is empty
+    const heroImageSrc = imageSrc || galleryItems[0]?.src || "/web/brány/kovové/000006.jpg";
 
     return (
         <div className="relative w-full h-[30vh] min-h-[300px] flex items-center justify-center overflow-hidden">
