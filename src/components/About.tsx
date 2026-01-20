@@ -17,7 +17,7 @@ export default function About() {
             setIsVisible(true);
             // Animate counters
             animateCounter(2011, setYearCount, 2000);
-            animateCounter(13, setExpCount, 1500);
+            animateCounter(15, setExpCount, 1500);
           }
         });
       },

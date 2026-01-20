@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
 import ServiceGallery from "@/components/ServiceGallery";
+import GasCabinetForm from "@/components/GasCabinetForm"; // Import the form
 
 // Recursive function to get all images
 function getImagesRecursively(dir: string, baseDir: string): string[] {
@@ -127,8 +128,30 @@ export default async function ServicePage(props: { params: Promise<{ slug: strin
                 </div>
             )}
 
+            {/* Order button for gas cabinets */}
+            {service.slug === "plynove-skrine" && (
+                <div className="mt-10">
+                    <a
+                        href="#objednavka"
+                        className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 font-semibold uppercase tracking-wider hover:bg-gray-800 transition-colors"
+                    >
+                        Mám záujem
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                    </a>
+                </div>
+            )}
+
             {/* Gallery */}
             <ServiceGallery images={images} />
+
+            {/* Conditional Form for Gas Cabinets */}
+            {service.slug === "plynove-skrine" && (
+                <div id="objednavka" className="mt-16 scroll-mt-24">
+                    <GasCabinetForm />
+                </div>
+            )}
         </div>
     );
 }

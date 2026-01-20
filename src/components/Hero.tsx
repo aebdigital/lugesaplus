@@ -2,35 +2,44 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 
 export default function Hero() {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 1000], ["0%", "15%"]);
-  useEffect(() => {
-    // Keep any hero specific effects here if needed
-  }, []);
 
   const heroImages = [
-    "/web/brány/kovové/000006.jpg",
-    "/web/zábradlia/nerezové/DSCN3473.JPG",
-    "/web/schodiská/schodisko_oceľové_1.jpg",
+    "/web/brány/kovové/IMG-20230313-WA0001.jpg",
+    "/web/brány/nerezové/P_20190805_162238.jpg",
+    "/web/brány/kovové/brána_ťahokov.JPG",
   ];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }, 5000); // Change image every 5 seconds
+    return () => clearInterval(interval);
+  }, [heroImages.length]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background Images with Crossfade */}
-      {heroImages.map((img, index) => (
+      <AnimatePresence initial={false}>
         <motion.div
-          key={index}
-          className={`absolute inset-0 bg-cover bg-center hero-bg-${index + 1}`}
+          key={heroImages[currentImageIndex]}
+          className="absolute inset-0 bg-cover bg-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
           style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url(${heroImages[currentImageIndex]})`,
             zIndex: 0,
             y,
           }}
         />
-      ))}
+      </AnimatePresence>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50 z-[1]" />
@@ -50,7 +59,7 @@ export default function Hero() {
             <div className="flex flex-wrap gap-4">
               <Link
                 href="#services"
-                className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 font-semibold uppercase text-sm tracking-wider hover:bg-gray-200 transition-colors"
+                className="inline-flex items-center gap-2 bg-white text-black px-8 py-4 font-semibold uppercase text-sm tracking-wider hover:bg-white/90 transition-colors"
               >
                 Naše služby
               </Link>

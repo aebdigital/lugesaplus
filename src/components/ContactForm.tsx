@@ -86,6 +86,18 @@ export default function ContactForm() {
                 />
             </div>
 
+            <div className="flex items-center gap-2">
+                <input
+                    type="checkbox"
+                    id="gdpr"
+                    required
+                    className="w-4 h-4 text-black border-gray-300 rounded focus:ring-black"
+                />
+                <label htmlFor="gdpr" className="text-sm text-gray-700">
+                    Súhlasím so <a href="/gdpr" className="underline hover:text-black">spracovaním osobných údajov</a>
+                </label>
+            </div>
+
             <button
                 type="submit"
                 disabled={status === "submitting"}

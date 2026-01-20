@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const galleryImages = [
-  { src: "/web/brány/kovové/brána_ťahokov.JPG", alt: "Kovová brána" },
-  { src: "/web/zábradlia/nerezové/DSCN3476.JPG", alt: "Nerezové zábradlie" },
-  { src: "/web/schodiská/schodisko_oceľové_2.jpg", alt: "Oceľové schodisko" },
-  { src: "/web/striešky/DSCN3441.JPG", alt: "Kovová strieška" },
-  { src: "/web/plynové skrinky/plynovaskrinka T1.jpg", alt: "Plynová skrinka" },
-  { src: "/web/brány/nerezové/IMG_20250830_113902_731.jpg", alt: "Nerezová brána" },
-  { src: "/web/zábradlia/nerezové/DSCN3677.JPG", alt: "Nerezové zábradlie interiér" },
+  { src: "/web/brány/kovové/IMG-20230313-WA0001.jpg", alt: "Kovová brána", category: "brany" },
+  { src: "/web/brány/nerezové/P_20190805_162238.jpg", alt: "Nerezová brána", category: "brany" },
+  { src: "/web/brány/kovové/brána_ťahokov.JPG", alt: "Brána ťahokov", category: "brany" },
+  { src: "/web/schodiská/schodisko_oceľové_2.jpg", alt: "Oceľové schodisko", category: "schodiska" },
+  { src: "/web/striešky/DSCN3441.JPG", alt: "Kovová strieška", category: "striesky" },
+  { src: "/web/plynové skrinky/plynovaskrinka T1.jpg", alt: "Plynová skrinka", category: "plynove-skrine" },
+  { src: "/web/zábradlia/nerezové/DSCN3677.JPG", alt: "Nerezové zábradlie interiér", category: "zabradlia" },
 ];
 
 export default function Gallery() {
@@ -48,9 +48,13 @@ export default function Gallery() {
           Galéria
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[5px]">
           {galleryImages.map((image, index) => (
-            <div key={index} className="gallery-item aspect-[4/3] relative">
+            <Link 
+              key={index} 
+              href={`/galeria?category=${image.category}`}
+              className="gallery-item aspect-[4/3] relative block"
+            >
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -58,12 +62,12 @@ export default function Gallery() {
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               />
-            </div>
+            </Link>
           ))}
 
           {/* All Projects Button */}
           <Link
-            href="#gallery"
+            href="/galeria"
             className="aspect-[4/3] bg-[#6c757d] flex flex-col items-center justify-center text-white hover:bg-[#5a6268] transition-colors group"
           >
             <svg

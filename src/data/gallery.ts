@@ -22,7 +22,7 @@ export const galleryItems: GalleryItem[] = [
 
     // Schodiská
     { id: 's1', src: '/web/schodiská/schodisko_oceľové_1.jpg', category: 'schodiska', alt: 'Oceľové schodisko' },
-    { id: 's2', src: '/web/schodiská/schodisko_oceľové_2.jpg', category: 'schodiska', alt: 'Oceľové schodisko točité' },
+    { id: 's2', src: '/web/schodiská/schodisko_oceľové_2.jpg', category: 'schodiska', alt: 'Oceľové schodisko' },
     { id: 's3', src: '/web/schodiská/DSC_1283.jpg', category: 'schodiska', alt: 'Schodisko detail' },
 
     // Plynové skrinky
@@ -41,7 +41,6 @@ export const galleryItems: GalleryItem[] = [
 ];
 
 export const categories = [
-    { id: 'all', label: 'Všetky' },
     { id: 'brany', label: 'Brány a oplotenia' },
     { id: 'zabradlia', label: 'Zábradlia' },
     { id: 'schodiska', label: 'Schodiská' },

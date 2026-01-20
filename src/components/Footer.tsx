@@ -77,9 +77,9 @@ export default function Footer() {
         <div>
           <h4 className="text-lg font-bold mb-6">Kontakt</h4>
           <ul className="space-y-4 text-white/60">
-            <li>Lúčna 817, 951 76 Tesárske Mlyňany</li>
-            <li>0904 537 629</li>
-            <li>lugesa@lugesa.sk</li>
+            <li>Tehelná 44/1, 953 01 Zlaté Moravce</li>
+            <li>0904 605 985</li>
+            <li>lugesaplus@lugesaplus.sk</li>
           </ul>
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="max-w-[90vw] mx-auto px-6 mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-white/40 text-sm">
-          © {new Date().getFullYear()} Lugesa plus, s.r.o. Všetky práva vyhradené.
+          © {new Date().getFullYear()} Lugesa plus, s.r.o. Všetky práva vyhradené. IČO: 47 525 371
         </p>
         <div className="flex gap-6 text-sm">
           <Link href="/gdpr" className="text-white/40 hover:text-white transition-colors">

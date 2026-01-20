@@ -18,7 +18,7 @@ export default function ServiceGallery({ images }: ServiceGalleryProps) {
     return (
         <div className="mt-16">
             <h3 className="text-lg font-bold mb-8 uppercase tracking-wider">Galéria</h3>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[5px]">
                 {images.map((src, index) => (
                     <div
                         key={index}

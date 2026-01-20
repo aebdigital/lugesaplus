@@ -6,17 +6,9 @@ import Link from "next/link";
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Scroll Progress Logic
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
-      setScrollProgress(progress);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,13 +24,6 @@ export default function Navigation() {
 
   return (
     <>
-      <div className="scroll-progress hidden md:block">
-        <div
-          className="scroll-progress-bar"
-          style={{ height: `${scrollProgress}%` }}
-        />
-      </div>
-
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black" : "bg-transparent"
           }`}

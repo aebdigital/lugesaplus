@@ -110,38 +110,38 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.id}
-              className="service-card group w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] p-8 border border-gray-200 bg-white hover:shadow-lg transition-all relative overflow-hidden"
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] p-8 border border-gray-200 relative overflow-hidden"
             >
-              {/* Background Image with Overlay on Hover */}
+              {/* Background Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0"
+                className="absolute inset-0 bg-cover bg-center z-0"
                 style={{
                   backgroundImage: `url(${service.slug === 'zabradlia' ? '/web/zábradlia/nerezové/DSCN3473.JPG' :
                       service.slug === 'brany-a-oplotenia' ? '/web/brány/kovové/000006.jpg' :
                         service.slug === 'schodiska' ? '/web/schodiská/schodisko_oceľové_1.jpg' :
-                          service.slug === 'plynove-skrine' ? '/web/plynové skrinky/plynovaskrinka T1.jpg' :
+                          service.slug === 'plynove-skrine' ? '/web/plynové%20skrinky/plynovaskrinka%20T1.jpg' :
                             '/web/brány/kovové/000006.jpg'
                     })`
                 }}
               />
-              <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-1" />
+              <div className="absolute inset-0 bg-black/40 z-[1]" />
 
               {/* Content */}
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="text-black group-hover:text-white transition-colors duration-300 mb-6">
+                <div className="text-white mb-6">
                   {getIconForService(service.slug)}
                 </div>
 
-                <h3 className="text-xl font-bold text-black group-hover:text-white transition-colors duration-300 mb-4 uppercase h-14 flex items-center">
+                <h3 className="text-xl font-bold text-white mb-4 uppercase h-14 flex items-center">
                   {service.title}
                 </h3>
-                <p className="text-black group-hover:text-white transition-colors duration-300 mb-6 leading-relaxed line-clamp-3 h-20">
+                <p className="text-white/90 mb-6 leading-relaxed line-clamp-3 h-20">
                   {service.description}
                 </p>
                 <Link
                   href={`/sluzby/${service.slug}`}
-                  className="flex items-center gap-2 text-black group-hover:text-white font-semibold text-sm uppercase tracking-wider group/link"
+                  className="inline-flex items-center gap-2 text-white font-semibold text-sm uppercase tracking-wider group/link"
                 >
                   Zobraziť viac
                   <svg

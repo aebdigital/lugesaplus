@@ -19,12 +19,12 @@ export default function ContactPage() {
                                 <h3 className="text-xl font-bold mb-6 uppercase tracking-wider">Fakturačné údaje</h3>
                                 <div className="space-y-4 text-black">
                                     <p className="font-semibold text-black">Lugesa plus, s.r.o.</p>
-                                    <p>Lúčna 817</p>
-                                    <p>951 76 Tesárske Mlyňany</p>
+                                    <p>Tehelná 44/1</p>
+                                    <p>953 01 Zlaté Moravce</p>
                                     <div className="pt-4 space-y-2">
-                                        <p>IČO: 47 186 942</p>
-                                        <p>DIČ: 2023793741</p>
-                                        <p>IČ DPH: SK2023793741</p>
+                                        <p>IČO: 47 525 371</p>
+                                        <p>DIČ: 2023936200</p>
+                                        <p>IČ DPH: SK2023936200</p>
                                     </div>
                                 </div>
                             </div>
@@ -37,16 +37,16 @@ export default function ContactPage() {
                                         <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                         </svg>
-                                        <a href="tel:0904537629" className="hover:text-black transition-colors">
-                                            0904 537 629
+                                        <a href="tel:0904605985" className="hover:text-black transition-colors">
+                                            0904 605 985
                                         </a>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                         </svg>
-                                        <a href="mailto:lugesa@lugesa.sk" className="hover:text-black transition-colors">
-                                            lugesa@lugesa.sk
+                                        <a href="mailto:lugesaplus@lugesaplus.sk" className="hover:text-black transition-colors">
+                                            lugesaplus@lugesaplus.sk
                                         </a>
                                     </div>
                                 </div>

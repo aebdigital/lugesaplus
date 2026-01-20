@@ -4,6 +4,7 @@ import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,10 +28,12 @@ export default function RootLayout({
   return (
     <html lang="sk">
       <body className={`${inter.variable} antialiased`}>
-        <Navigation />
-        {children}
-        <Footer />
-        <CookieBanner />
+        <SmoothScroll>
+          <Navigation />
+          {children}
+          <Footer />
+          <CookieBanner />
+        </SmoothScroll>
       </body>
     </html>
   );
