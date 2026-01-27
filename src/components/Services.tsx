@@ -108,28 +108,29 @@ export default function Services() {
         {/* Services Grid (4 per row on large screens) */}
         <div className="flex flex-wrap justify-center gap-6">
           {services.map((service, index) => (
-            <div
+            <Link
               key={service.id}
-              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] p-8 border border-gray-200 relative overflow-hidden"
+              href={`/sluzby/${service.slug}`}
+              className="w-full md:w-[calc(50%-12px)] lg:w-[calc(25%-18px)] p-8 border border-gray-200 relative overflow-hidden group block"
             >
               {/* Background Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center z-0"
+                className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-700 ease-out group-hover:scale-110"
                 style={{
                   backgroundImage: `url(${service.slug === 'zabradlia' ? '/web/zábradlia/nerezové/DSCN3473.JPG' :
-                      service.slug === 'brany-a-oplotenia' ? '/web/brány/kovové/000006.jpg' :
-                        service.slug === 'schodiska' ? '/web/schodiská/schodisko_oceľové_1.jpg' :
-                          service.slug === 'plynove-skrine' ? '/web/plynové%20skrinky/plynovaskrinka%20T1.jpg' :
-                            '/web/brány/kovové/000006.jpg'
+                    service.slug === 'brany-a-oplotenia' ? '/web/brány/kovové/000006.jpg' :
+                      service.slug === 'schodiska' ? '/web/schodiská/schodisko_oceľové_1.jpg' :
+                        service.slug === 'plynove-skrine' ? '/web/plynové%20skrinky/plynovaskrinka%20T1.jpg' :
+                          '/web/brány/kovové/000006.jpg'
                     })`
                 }}
               />
-              <div className="absolute inset-0 bg-black/40 z-[1]" />
+              <div className="absolute inset-0 bg-black/40 z-[1] transition-opacity duration-300 group-hover:bg-black/50" />
 
               {/* Content */}
               <div className="relative z-10">
                 {/* Icon */}
-                <div className="text-white mb-6">
+                <div className="text-white mb-6 transform transition-transform duration-300 group-hover:-translate-y-1">
                   {getIconForService(service.slug)}
                 </div>
 
@@ -139,13 +140,12 @@ export default function Services() {
                 <p className="text-white/90 mb-6 leading-relaxed line-clamp-3 h-20">
                   {service.description}
                 </p>
-                <Link
-                  href={`/sluzby/${service.slug}`}
+                <div
                   className="inline-flex items-center gap-2 text-white font-semibold text-sm uppercase tracking-wider group/link"
                 >
                   Zobraziť viac
                   <svg
-                    className="w-4 h-4 transition-transform group-hover/link:translate-x-1"
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -157,9 +157,9 @@ export default function Services() {
                       d="M17 8l4 4m0 0l-4 4m4-4H3"
                     />
                   </svg>
-                </Link>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 

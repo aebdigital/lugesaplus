@@ -62,7 +62,7 @@ export default function CookieBanner() {
                         <div className="flex-1">
                             <h3 className="text-lg font-bold mb-2">Nastavenie súborov cookies</h3>
                             <p className="text-white/70 text-sm">
-                                Naša webová stránka používa súbory cookies na zabezpečenie správneho fungovania a pre analytické účely.
+                                Naša webová stránka používa <Link href="/cookies" className="underline hover:text-white">súbory cookies</Link> na zabezpečenie správneho fungovania a pre analytické účely.
                                 Viac informácií nájdete v sekcii <Link href="/gdpr" className="underline hover:text-white">Ochrana osobných údajov</Link>.
                             </p>
                         </div>

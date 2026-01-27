@@ -14,7 +14,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Lugesa plus, s.r.o. - Kovovýroba a kovové konštrukcie",
-  description: "Výroba kovových konštrukcií, brán, plotov, zábradlí a schodísk na mieru. Kvalitná kovovýroba od roku 2011.",
+  description: "Výroba kovových konštrukcií, brán, plotov, zábradlí a schodísk na mieru. Výroba plynových skriniek",
+  keywords: "zábradlie nerezové, nerezové zabradlia, plynové skrinky, skrinky na plyn, oceľové konštrukcie, nerezové výrobky, nerezové zábradlie, nerezové brány, hliníkové brány, nerezové profily, nerezové plechy, nerezové zábradlia, nerezové zábradlie, nerezové, nerezové ploty, kovovýroba, zváranie co2, zváranie argónom, zváranie nereze, výroba nerezových zábradlí, výroba kovových zábradlí, výroba kovových konštrukcií, ploty, brány, mreže, markízy, prístrešky, schodiská, drobné kovové konštrukcie, výrobky z plechu, zváranie nerezovej ocele, zváranie hliníka, plynové skrinky, skrinky na plyn, skrinky na plynomer, kovovýroba, zváranie hliníka, výroba nerezových zábradlí, zábradlia, kovové konštrukcie, schodištia, prístrešky",
   icons: {
     icon: "/web/logo a favicon/favicon.ico",
   },
