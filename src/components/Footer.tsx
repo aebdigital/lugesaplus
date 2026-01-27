@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -79,7 +80,7 @@ export default function Footer() {
           <ul className="space-y-4 text-white/60">
             <li>Tehelná 44/1, 953 01 Zlaté Moravce</li>
             <li>0904 605 985</li>
-            <li>lugesaplus@lugesaplus.sk</li>
+            <li><ObfuscatedEmail className="hover:text-white transition-colors" /></li>
           </ul>
         </div>
       </div>

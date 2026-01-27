@@ -2,10 +2,13 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -14,6 +17,17 @@ export default function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    // If clicking the current page link, scroll to top
+    if (pathname === href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Always close mobile menu
+    setIsMobileMenuOpen(false);
+  };
 
   const navLinks = [
     { href: "/", label: "Domov" },
@@ -40,6 +54,7 @@ export default function Navigation() {
                 <Link
                   href={link.href}
                   className="text-white text-sm uppercase tracking-wider relative group"
+                  onClick={(e) => handleLinkClick(e, link.href)}
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300 group-hover:w-full" />
@@ -90,7 +105,7 @@ export default function Navigation() {
               key={link.href}
               href={link.href}
               className="text-white text-2xl uppercase tracking-wider"
-              onClick={() => setIsMobileMenuOpen(false)}
+              onClick={(e) => handleLinkClick(e, link.href)}
             >
               {link.label}
             </Link>

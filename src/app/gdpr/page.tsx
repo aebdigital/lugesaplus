@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import ObfuscatedEmail from "@/components/ObfuscatedEmail";
 
 export default function GDPRPage() {
     return (
@@ -19,7 +20,7 @@ export default function GDPRPage() {
                             953 01 Zlaté Moravce<br />
                             IČO: 47 525 371<br />
                             Tel. č.: <a href="tel:0904605985" className="underline">0904 605 985</a><br />
-                            Email: <a href="mailto:lugesaplus@lugesaplus.sk" className="underline">lugesaplus@lugesaplus.sk</a>
+                            Email: <ObfuscatedEmail className="underline" />
                         </address>
                     </section>
 
@@ -96,10 +97,10 @@ export default function GDPRPage() {
                         <h2 className="text-xl font-bold text-black border-b border-black/10 pb-2 mb-4">Ako môžete naplniť svoje práva?</h2>
 
                         <h3 className="font-bold text-lg mb-2">Právo na prístup k údajom</h3>
-                        <p>Máte právo vedieť, či spracúvame Vaše osobné údaje. Pokiaľ ich spracúvame, môžete nás požiadať o prístup k nim. Na základe Vašej žiadosti vydáme potvrdenie s informáciami o spracúvaní Vašich osobných údajov. Žiadosť môžete podať elektronicky, na emailovú adresu lugesaplus@lugesaplus.sk, alebo poštou na adresu Lugesa plus, s.r.o., Tehelná 44/1, 953 01 Zlaté Moravce.</p>
+                        <p>Máte právo vedieť, či spracúvame Vaše osobné údaje. Pokiaľ ich spracúvame, môžete nás požiadať o prístup k nim. Na základe Vašej žiadosti vydáme potvrdenie s informáciami o spracúvaní Vašich osobných údajov. Žiadosť môžete podať elektronicky, na emailovú adresu <ObfuscatedEmail />, alebo poštou na adresu Lugesa plus, s.r.o., Tehelná 44/1, 953 01 Zlaté Moravce.</p>
 
                         <h3 className="font-bold text-lg mt-6 mb-2">Právo na opravu</h3>
-                        <p>Máte právo na to, aby Vaše osobné údaje, ktoré spracúvame, boli správne, úplné a aktuálne. Pokiaľ sú Vaše osobné údaje nesprávne alebo neaktuálne, môžete nás požiadať o opravu alebo doplnenie a to elektronickou formou na emailovú adresu lugesaplus@lugesaplus.sk, alebo poštou na korešpondenčnú adresu Lugesa plus, s.r.o., Tehelná 44/1, 953 01 Zlaté Moravce.</p>
+                        <p>Máte právo na to, aby Vaše osobné údaje, ktoré spracúvame, boli správne, úplné a aktuálne. Pokiaľ sú Vaše osobné údaje nesprávne alebo neaktuálne, môžete nás požiadať o opravu alebo doplnenie a to elektronickou formou na emailovú adresu <ObfuscatedEmail />, alebo poštou na korešpondenčnú adresu Lugesa plus, s.r.o., Tehelná 44/1, 953 01 Zlaté Moravce.</p>
 
                         <h3 className="font-bold text-lg mt-6 mb-2">Právo na vymazanie</h3>
                         <p>Za určitých okolností máte právo, aby sme Vaše osobné údaje vymazali. O vymazanie Vašich údajov nás môžete požiadať kedykoľvek. Vaše osobné údaje vymažeme, ak: už vaše osobné údaje nepotrebujeme pre účel, na ktorý ste nám ich poskytli; odvoláte svoj súhlas; namietate voči spracúvaniu vašich osobných údajov; spracúvame Vaše osobné údaje nezákonne; osobné údaje musia byť vymazané, aby sa tým splnila zákonná povinnosť; ak ste dieťa, príp. rodič dieťaťa, ktoré súhlasilo so spracúvaním osobných údajov cez internet.</p>

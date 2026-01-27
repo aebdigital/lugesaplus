@@ -1,0 +1,9 @@
+
+<p>
+     <script src="adr.js">
+     </script><script language='JavaScript' type='text/javascript'>
+     <!--
+      document.write( '<span style=\'display: none;\'>' );
+      //-->
+      </script> Táto e-mailov&#225; adresa je chr&#225;nen&#225; pred spamov&#253;mi robotmi, aby ste ju mohli vidie&#357;, zapnite si Javascript. </span>
+ </p>
